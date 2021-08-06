@@ -1,0 +1,65 @@
+﻿<Window x:Class="ZB.Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZB.Calculator"
+        mc:Ignorable="d"
+        Title="MainWindow"  Loaded="Window_Loaded" 
+        Background="#FFDDB0B0" WindowStartupLocation="CenterScreen" 
+        Width="410"
+        Height="370"
+        FocusManager.FocusedElement="{Binding ElementName=txtInput}">
+    <!--To focus the input box-->
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"></RowDefinition>
+            <RowDefinition Height="100"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition Height="150"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="300"></ColumnDefinition>
+            <ColumnDefinition Width="100"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Row="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Label x:Name="lblUserName"/>
+            <Button Content="Log Out" Height="24" Click="btnLogOut_Click" />
+        </StackPanel>
+       
+        <WrapPanel Grid.Row="1" Grid.Column="1" Width="72">
+            <Button x:Name="btn_1" Content="1" Height="24" Width="24" Click="AcceptInput"/>
+            <Button x:Name="btn_2" Content="2" Height="24" Width="24" Click="AcceptInput"/>
+            <Button x:Name="btn_3" Content="3" Height="24" Width="24" Click="AcceptInput"/>
+            <Button x:Name="btn_4" Content="4" Height="24" Width="24" Click="AcceptInput"/>
+            <Button x:Name="btn_5" Content="5" Height="24" Width="24" Click="AcceptInput"/>
+            <Button x:Name="btn_6" Content="6" Height="24" Width="24" Click="AcceptInput"/>
+            <Button x:Name="btn_7" Content="7" Height="24" Width="24" Click="AcceptInput"/>
+            <Button x:Name="btn_8" Content="8" Height="24" Width="24" Click="AcceptInput" />
+            <Button x:Name="btn_9" Content="9" Height="24" Width="24" Click="AcceptInput"/>
+            <Button x:Name="btn_0" Content="0" Height="24" Width="24" Click="AcceptInput"/>
+        </WrapPanel>
+        
+        <WrapPanel Grid.Row="4" Grid.Column="1"  Width="72">
+            <Button x:Name="btn_C" Content="C" Height="24" Width="24" Click="btn_C_Click"/>
+            <Button x:Name="btn_Plus" Content="+" Height="24" Width="24" Click="AcceptInput"/>
+            <Button x:Name="btn_Minus" Content="-" Width="24" Height="24" Click="AcceptInput"/>
+            <Button x:Name="btn_Multiply" Content="×" Height="24" Width="24" Click="AcceptInput"/>
+            <Button x:Name="btn_Divided" Content="÷" Width="24" Height="24" Click="AcceptInput"/>
+            <Button x:Name="btn_Brackets" Content="(" Height="24" Width="24" Click="AcceptInput"/>
+            <Button x:Name="btn_Brackets1" Content=")" Height="24" Width="24" Click="AcceptInput"/>
+            <Button x:Name="btn_Point" Content="." Height="24" Width="24" Click="AcceptInput"/>
+        </WrapPanel>
+
+        <TextBox Grid.Row="1" Grid.Column="0" x:Name="txtInput" TextWrapping="Wrap" PreviewTextInput="TxtInput_PreviewTextInput" TextChanged="TxtInput_TextChanged"/>
+
+        <Button Grid.Row="2" Grid.Column="0" x:Name="btn_Equals" Content="=" Height="24" Width="24" HorizontalAlignment="Right" IsDefault="True" Click="btn_Equals_Click"/>
+
+        <Button Grid.Row="3" Grid.Column="0" Content="Delete All Logs" HorizontalAlignment="Right" />
+
+        <ListBox Grid.Row="4" Grid.Column="0" x:Name="lstResultHistory" SelectionChanged="lstResultHistory_SelectionChanged"/>
+    </Grid>
+</Window>

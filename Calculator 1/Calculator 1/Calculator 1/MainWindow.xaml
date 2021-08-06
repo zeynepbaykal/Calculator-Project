@@ -1,0 +1,70 @@
+﻿<Window x:Class="Calculator_1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Calculator_1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem x:Name="RegisterWindow" Header="Register" Height="22" Margin="-2,-2,-2,0" VerticalAlignment="Top">
+                <Grid Background="#FFE5E5E5">
+                    <Button Content="Register" HorizontalAlignment="Center" Margin="0,178,0,0" VerticalAlignment="Top" Width="185" Click="btnRegister_Click"/>
+                    <Label  Content="User Name" HorizontalAlignment="Left" Margin="14,19,0,0" VerticalAlignment="Top"/>
+                    <Label  Content="E-Mail" HorizontalAlignment="Left" Margin="15,56,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Password" HorizontalAlignment="Left" Margin="15,91,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Re Password" HorizontalAlignment="Left" Margin="14,131,0,0" VerticalAlignment="Top"/>
+                    <TextBox x:Name="txtUserName" HorizontalAlignment="Left" Margin="114,24,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+                    <TextBox x:Name="txtEMail" HorizontalAlignment="Left" Margin="114,62,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+                    <PasswordBox x:Name="pswPassword" HorizontalAlignment="Left" Margin="114,96,0,0" VerticalAlignment="Top" Width="120"/>
+                    <PasswordBox x:Name="pswRePassword" HorizontalAlignment="Left" Margin="114,137,0,0" VerticalAlignment="Top" Width="120"/>
+                </Grid>
+            </TabItem>
+            <TabItem x:Name="LoginWindow" Header="Login">
+                <Grid Background="#FFE5E5E5">
+                    <Button Content="Login" HorizontalAlignment="Left" Margin="61,79,0,0" VerticalAlignment="Top" Width="185" Click="btnLogin_Click"/>
+                    <PasswordBox x:Name="pswLogin" HorizontalAlignment="Left" Margin="112,52,0,0" VerticalAlignment="Top" Width="120"/>
+                    <Label Content="Password:" HorizontalAlignment="Left" Margin="30,45,0,0" VerticalAlignment="Top" Width="90"/>
+                    <TextBox x:Name="txtLogin" HorizontalAlignment="Left" Margin="112,14,0,0"  VerticalAlignment="Top" Width="120"/>
+                    <Label Content="User Name" HorizontalAlignment="Left" Margin="30,11,0,0" VerticalAlignment="Top" Width="73"/>
+                    <Button x:Name="btnRegister_degisme" Content="Register" HorizontalAlignment="Left" Margin="118,112,0,0" VerticalAlignment="Top" Width="76" Click="BtnRegister_degisme_Click"/>
+                </Grid>
+
+
+            </TabItem>
+            <TabItem x:Name="tabCalculator" Header="Calculator" Margin="-2,-2,-2,0" IsEnabled="False">
+                <Grid Background="AliceBlue">
+                    <TextBox x:Name="txtSonuc" HorizontalAlignment="Left" Margin="19,30,0,0"  TextWrapping="Wrap" VerticalAlignment="Top" Width="268" Height="85"/>
+                    <ListBox x:Name="____" Margin="9,210,97,36"/>
+                    <Button Content="Log Out" HorizontalAlignment="Left" Margin="496,2,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.401,0.575" Height="19" Width="55" Click="btnLogOut_Click"/>
+                    <Button x:Name="btn_C" Content="C" HorizontalAlignment="Left" Margin="376,35,0,0" VerticalAlignment="Top" Height="24" Width="24" Click="btn_C_Click"/>
+                    <Button Content="DEL" HorizontalAlignment="Left" Margin="400,35,0,0" VerticalAlignment="Top" Height="24" Width="24"/>
+                    <Button x:Name="btn_Divided" Content="÷" HorizontalAlignment="Left" Margin="425,35,0,0" VerticalAlignment="Top" Width="24" Height="24" Click="btn_Divided_Click"/>
+                    <Button x:Name="btn_7" Content="7" HorizontalAlignment="Left" Margin="350,60,0,0" VerticalAlignment="Top" Height="24" Width="24" Click="btn_7_Click"/>
+                    <Button x:Name="btn_8" Content="8" HorizontalAlignment="Left" Margin="375,60,0,0" VerticalAlignment="Top" Height="24" Width="24" Click="btn_8_Click" />
+                    <Button x:Name="btn_9" Content="9" HorizontalAlignment="Left" Margin="400,60,0,0" VerticalAlignment="Top" Height="24" Width="24" Click="btn_9_Click"/>
+                    <Button x:Name="btn_Multiply" Content="×" HorizontalAlignment="Left" Margin="425,60,0,0" VerticalAlignment="Top" Height="24" Width="24" Click="btn_Multiply_Click"/>
+                    <Button x:Name="btn_Brackets" Content="(" HorizontalAlignment="Left" Margin="450,60,0,0" VerticalAlignment="Top" Height="24" Width="24" Click="btn_BracketsRight_Click"/>
+                    <Button x:Name="btn4" Content="4" HorizontalAlignment="Left" Margin="350,85,0,0" VerticalAlignment="Top" Width="24" Height="24" Click="btn_4_Click"/>
+                    <Button x:Name="btn_5" Content="5" HorizontalAlignment="Left" Margin="375,85,0,0" VerticalAlignment="Top" Width="24" Height="24" Click="btn_5_Click"/>
+                    <Button x:Name="btn_6" Content="6" HorizontalAlignment="Left" Margin="400,85,0,0" VerticalAlignment="Top" Width="24" Height="24" Click="btn_6_Click"/>
+                    <Button x:Name="btn_Minus" Content="-" HorizontalAlignment="Left" Margin="425,85,0,0" VerticalAlignment="Top" Width="24" Height="24" Click="btn_Minus_Click"/>
+                    <Button x:Name="btn_Brackets1" Content=")" HorizontalAlignment="Left" Margin="450,85,0,0" VerticalAlignment="Top" Height="24" Width="24" Click="btn_BracketsLeft_Click"/>
+                    <Button x:Name="btn_1" Content="1" HorizontalAlignment="Left" Margin="350,110,0,0" VerticalAlignment="Top" Height="24" Width="24" Click="btn_1_Click"/>
+                    <Button x:Name="btn_2" Content="2" HorizontalAlignment="Left" Margin="375,110,0,0" VerticalAlignment="Top" Height="24" Width="24" Click="btn_2_Click"/>
+                    <Button x:Name="btn_3" Content="3" HorizontalAlignment="Left" Margin="400,110,0,0" VerticalAlignment="Top" Height="24" Width="24" Click="btn_3_Click"/>
+                    <Button x:Name="btn_Plus" Content="+" HorizontalAlignment="Left" Margin="425,110,0,0" VerticalAlignment="Top" Height="24" Width="24" Click="btn_Plus_Click"/>
+                    <Button Content="Space" HorizontalAlignment="Left" Margin="450,110,0,0" VerticalAlignment="Top" Height="24" Width="40"/>
+                    <Button x:Name="btn_Point" Content="." HorizontalAlignment="Left" Margin="350,135,0,0" VerticalAlignment="Top" Height="24" Width="24" Click="btn_Point_Click"/>
+                    <Button x:Name="btn_0" Content="0" HorizontalAlignment="Left" Margin="375,135,0,0" VerticalAlignment="Top" Height="24" Width="24" Click="btn_0_Click"/>
+                    <Button x:Name="btn_Comma" Content="," HorizontalAlignment="Left" Margin="400,135,0,0" VerticalAlignment="Top" Height="24" Width="24" Click="btn_Comma_Click"/>
+                    <Button x:Name="btn_Equals" Content="=" HorizontalAlignment="Left" Margin="425,135,0,0" VerticalAlignment="Top" Height="24" Width="24" Click="btn_Equals_Click"/>
+                    <Button Content="Delete All Logs" HorizontalAlignment="Left" Margin="475,37,0,0" VerticalAlignment="Top"/>
+                    <Label x:Name="lblUserName" Content="Label" HorizontalAlignment="Left" Margin="6,2,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>
